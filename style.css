@@ -1,0 +1,129 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: minmax(300px, 2fr) 3fr;
+    grid-auto-rows: 400px;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero .image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.info {
+    align-self: center;
+}
+
+.info .title {
+    font-size: 3rem;
+    color: #333;
+}
+
+.info .subtitle {
+    font-size: 20px;
+    font-weight: 100;
+    color: #333;
+}
+
+.info button {
+    padding: 14px 50px 14px 50px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bolder;
+    color: #333;
+    background-color: #fb8c00;
+}
+
+.dishes-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(150px, 250px));
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    gap: 20px;
+}
+
+.disches-item {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.disches-item__big {
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+.dishes h2 {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.menu {
+    margin-bottom: 5rem;
+}
+
+.menu-title {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bolder;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.menu-grid {
+    display: grid;
+    justify-content: center;
+    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, 150px);
+}
+
+.menu-grid-item {
+    background-color: coral;
+    border-top-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+}
+
+.menu-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 750px) {
+
+    .info {
+        grid-template-columns:  minmax(200px,200px);
+        grid-template-columns: 1fr;
+       justify-content: center;
+        position: absolute;
+        z-index: 3;
+        font-weight: bolder;
+        color: #333;
+    }
+
+    .hero .image {
+        position: relative;
+        opacity: 0.8;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+       text-align: center;
+    }
+
+    .dishes-grid {
+        grid-template-columns: repeat(auto-fit , minmax(75px, 100px));
+    }
+}
+
